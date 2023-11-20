@@ -22,7 +22,14 @@ router.get('/', async (req, res) => {
 router.get('/method/:method', async (req, res) => {
 
     const contacts = await Contact.find({ preferredMethod: req.params.method })
-    res.json(contacts)
+
+    try {
+        res.status(200)
+        res.json(contacts)
+    } catch (err) {
+        res.status(400)
+        res.json({msg: err.message})
+    }
 })
 
 
