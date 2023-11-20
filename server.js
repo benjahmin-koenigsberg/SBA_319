@@ -23,6 +23,6 @@ app.use('/subscribers', subscribersRouter)
 const contactRouter = require('./routes/contacts')
 app.use('/contacts', contactRouter)
 
-seedDb()
+//seedDb()
 
 app.listen(5000, () => { console.log('Server is running 🚀') })

@@ -21,7 +21,7 @@ async function seedDb() {
 
     const result = await Contact.insertMany(docs);
     console.log(`${docs.length -1 } documents were inserted`);
-    mongoose.connection.close()
+   // mongoose.connection.close()
 }
 
 module.exports = seedDb

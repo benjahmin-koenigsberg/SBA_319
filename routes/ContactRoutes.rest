@@ -1,0 +1,21 @@
+GET http://localhost:5000/contacts
+
+###
+
+GET http://localhost:5000/contacts/655bd5ed1b81fd65c9182de7
+
+
+###
+
+DELETE http://localhost:5000/contacts/655bd5ed1b81fd65c9182de7
+
+###
+POST http://localhost:5000/contacts
+Content-Type: application/json
+
+{
+    "name": "Benny B",
+    "email": "bennyb@benny.com",
+    "phone": 2128765642,
+    "preferredMethod": "email"
+}

@@ -19,8 +19,8 @@ router.get('/', async (req, res) => {
 })
 
 //get once
-router.get('/:id', async (req, res) => {
-   const contact = await Contact.findById(req.params.id)
+router.get('/:_id', async (req, res) => {
+   const contact = await Contact.findById(req.params._id)
     res.json(contact)
 
 })
@@ -34,7 +34,7 @@ router.post('/', async (req, res) => {
         preferredMethod: req.body.preferredMethod
     })
     try {
-        const newContact = await Contact.save()
+        const newContact = await contact.save()
         res.status(201).json(newContact)
 
     } catch (err) {
@@ -44,11 +44,11 @@ router.post('/', async (req, res) => {
 })
 
 //update once
-router.patch('/:id',  async (req, res) => {
-    const contact = await Contact.findById(req.params.id)
+router.patch('/:_id',  async (req, res) => {
+    const contact = await Contact.findById(req.params._id)
 
     try {
-        const updatedContact = await res.contact.save()
+        const updatedContact = await contact.save()
         res.json(updatedContact)
 
     } catch (err) {
@@ -58,11 +58,11 @@ router.patch('/:id',  async (req, res) => {
 })
 
 //deleye one
-router.delete('/:id', async (req, res) => {
-    const contact = await Contact.findById(req.params.id)
+router.delete('/:_id', async (req, res) => {
+    const contact = await Contact.findById(req.params._id)
 
     try {
-        await res.contact.deleteOne()
+        await contact.deleteOne()
         res.status(200).json({ msg: 'Deleted contact' })
 
     } catch (err) {
