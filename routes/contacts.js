@@ -20,20 +20,21 @@ router.get('/', async (req, res) => {
 
 //get once
 router.get('/:id', async (req, res) => {
-    res.json(res.contact)
+   const contact = await Contact.findById(req.params.id)
+    res.json(contact)
 
 })
 
 //create once
 router.post('/', async (req, res) => {
-    const subscriber = new Subscriber({
+    const contact = new Contact({
         name: req.body.name,
         email: req.body.email,
         phone: req.body.phone,
         preferredMethod: req.body.preferredMethod
     })
     try {
-        const newContact = await contact.save()
+        const newContact = await Contact.save()
         res.status(201).json(newContact)
 
     } catch (err) {
@@ -44,6 +45,8 @@ router.post('/', async (req, res) => {
 
 //update once
 router.patch('/:id',  async (req, res) => {
+    const contact = await Contact.findById(req.params.id)
+
     try {
         const updatedContact = await res.contact.save()
         res.json(updatedContact)
@@ -56,6 +59,8 @@ router.patch('/:id',  async (req, res) => {
 
 //deleye one
 router.delete('/:id', async (req, res) => {
+    const contact = await Contact.findById(req.params.id)
+
     try {
         await res.contact.deleteOne()
         res.status(200).json({ msg: 'Deleted contact' })
