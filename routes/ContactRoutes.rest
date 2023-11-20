@@ -1,13 +1,15 @@
-GET http://localhost:5000/contacts
 
-###
-
-GET http://localhost:5000/contacts/655bd5ed1b81fd65c9182de7
+GET http://localhost:5000/contacts/method/email
 
 
 ###
+GET http://localhost:5000/contacts/655bd5ed1b81fd65c9182de9
 
-DELETE http://localhost:5000/contacts/655bd5ed1b81fd65c9182de7
+
+
+###
+DELETE http://localhost:5000/contacts/655bd91698525bc0441c9786
+
 
 ###
 POST http://localhost:5000/contacts
@@ -18,4 +20,30 @@ Content-Type: application/json
     "email": "bennyb@benny.com",
     "phone": 2128765642,
     "preferredMethod": "email"
+}
+
+
+###
+POST http://localhost:5000/contacts
+Content-Type: application/json
+
+
+{
+    "name": "",
+    "email": "",
+    "phone":
+    "preferredMethod": ""
+}
+
+
+
+###
+PATCH  http://localhost:5000/contacts/655bd91698525bc0441c9786
+Content-Type: application/json
+
+{
+    "name": "Benjahmin Lakin Koenigsberg",
+    "email": "mrman@gmail.com",
+    "phone": 9713765653,
+    "preferredMethod": "phone"
 }

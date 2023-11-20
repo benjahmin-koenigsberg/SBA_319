@@ -1,5 +1,5 @@
 const express = require('express')
-const seedDb = require('./contacts.js')
+const seedDb = require('./seedDb.js')
 
 require('dotenv').config()
 

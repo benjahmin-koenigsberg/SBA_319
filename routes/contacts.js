@@ -18,12 +18,22 @@ router.get('/', async (req, res) => {
 
 })
 
+//get contacts by prefeerd method for communication
+router.get('/method/:method', async (req, res) => {
+
+    const contacts = await Contact.find({ preferredMethod: req.params.method })
+    res.json(contacts)
+})
+
+
 //get once
 router.get('/:_id', async (req, res) => {
    const contact = await Contact.findById(req.params._id)
     res.json(contact)
 
 })
+
+
 
 //create once
 router.post('/', async (req, res) => {
@@ -45,7 +55,20 @@ router.post('/', async (req, res) => {
 
 //update once
 router.patch('/:_id',  async (req, res) => {
-    const contact = await Contact.findById(req.params._id)
+
+let contact = await Contact.findById(req.params._id)
+
+// contact.name = req.body.name,
+// contact.email = req.body.email,
+// contact.phone = req.body.phone,
+// contact.preferredMethod = req.body.preferredMethod
+   contact = new Contact({
+        name: req.body.name,
+        email: req.body.email,
+        phone: req.body.phone,
+        preferredMethod: req.body.preferredMethod
+    })
+
 
     try {
         const updatedContact = await contact.save()
@@ -57,7 +80,7 @@ router.patch('/:_id',  async (req, res) => {
 
 })
 
-//deleye one
+//delete one
 router.delete('/:_id', async (req, res) => {
     const contact = await Contact.findById(req.params._id)
 
