@@ -1,4 +1,8 @@
 
+GET http://localhost:5000/contacts
+
+###
+
 GET http://localhost:5000/contacts/method/email
 
 
@@ -16,9 +20,9 @@ POST http://localhost:5000/contacts
 Content-Type: application/json
 
 {
-    "name": "Benny B",
-    "email": "bennyb@benny.com",
-    "phone": 2128765642,
+    "name": "Serina V",
+    "email": "yourcousin@family.com",
+    "phone": 2177865642,
     "preferredMethod": "email"
 }
 

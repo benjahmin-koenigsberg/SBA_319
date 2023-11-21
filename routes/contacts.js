@@ -4,11 +4,10 @@ const Contact = require('../models/contact')
 //const contact = require('../models/contact')
 
 
-
 //get all
 router.get('/', async (req, res) => {
     try {
-        const contacts = await Contact.find()
+        const contacts = await Contact.find().sort({name: 'asc'})
         res.status(200)
         res.json(contacts)
     } catch (err) {
@@ -65,10 +64,6 @@ router.patch('/:_id',  async (req, res) => {
 
 let contact = await Contact.findById(req.params._id)
 
-// contact.name = req.body.name,
-// contact.email = req.body.email,
-// contact.phone = req.body.phone,
-// contact.preferredMethod = req.body.preferredMethod
    contact = new Contact({
         name: req.body.name,
         email: req.body.email,
@@ -101,20 +96,5 @@ router.delete('/:_id', async (req, res) => {
 
 })
 
-
-// async function getSubscribers(req, res, next) {
-//     let subscriber;
-//     try {
-//         subscriber = await Subscriber.findById(req.params.id)
-//         if (subscriber == null) {
-//             return res.status(404).json({ msg: 'cannot find subscirber' })
-//         }
-//     } catch (err) {
-//         return res.status(500).json({ message: err.message })
-
-//     }
-//     res.subscriber = subscriber
-//     next()
-// }
 
 module.exports = router;
