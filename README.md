@@ -1,8 +1,9 @@
 ### SBA 319: MongoDB Database Application
 
-This assessment measures your understanding of MongoDB and your capability to implement its features in a practical manner. You have creative freedom
+This assessment from my bootcamp 🏫, Per Scholas
+https://perscholas.org , measures your understanding of MongoDB and your capability to implement its features in a practical manner. You have creative freedom
 
-### Objectives
+### Objectives 🥅
 
 - Create a server application with Node, Express, and MongoDB.
 - Create a CRUD API using Express and MongoDB.
@@ -11,7 +12,9 @@ This assessment measures your understanding of MongoDB and your capability to im
 - Create MongoDB validation rules.
 - Use MongoDB validation to ensure data consistency.
 
-### Requirements
+### Tech stack 💻
+
+### Requirements  🔨
 
 - [x] Create GET, DELETE, PATCH, and POST routes using appropriate query commands to retrieve the data from the database.
 
@@ -65,7 +68,7 @@ DELETE http://localhost:5000/contacts/:id
 - [x] Use Mongoose to implement your application.
 
 
-### Operate API locally
+### Operate API locally 🏃
 
 - fork or clone this repo
 https://github.com/benjahmin-koenigsberg/SBA_319.git
@@ -76,8 +79,13 @@ https://github.com/benjahmin-koenigsberg/SBA_319.git
 - add your own MongoDB connection string in an .env file or add it in
 ```mongoose.connection(<your_connection_string>)```
 
+### Shout outs 📣
 
-### Reflection
+Thank you to my Per Scholas intsructors, classmates and Kyle of WebDev Simplified for his awesome tutorial on building a CRUD API with Node, MongoDB and Mongoose
+
+https://www.youtube.com/watch?v=fgTGADljAeg
+
+### Reflection 🪞
 
 What could you have done differently during the planning stages of your project to make the execution easier?
 
@@ -90,5 +98,3 @@ Were there any requirements that were difficult to implement? What do you think 
 What would you add to or change about your application if given more time?
 
 >I think it could be fun to learn how to store images or media in a MongoDB database or sync with a file storage API
-
-
