@@ -25,6 +25,11 @@ GET http://localhost:5000/contacts/:id
 
 GET http://localhost:500/contacts/method/email
 
+```
+![Alt text](<Screen Shot 2023-11-27 at 6.51.28 AM.png>)
+
+```
+
 POST http://localhost:5000/contacts
 Content-Type: application/json
 
@@ -66,6 +71,14 @@ DELETE http://localhost:5000/contacts/:id
 - [x] Include a README file that contains a description of your application.
 
 - [x] Use Mongoose to implement your application.
+
+### Screen Shots
+
+**MongoDB Atlas: My Contacts Collection**
+![Alt text](<Screen Shot 2023-11-27 at 6.50.51 AM.png>)
+
+**My Contact Schema**
+![Alt text](<Screen Shot 2023-11-27 at 6.51.10 AM.png>)
 
 
 ### Operate API locally 🏃

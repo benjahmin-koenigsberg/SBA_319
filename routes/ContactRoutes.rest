@@ -7,12 +7,12 @@ GET http://localhost:5000/contacts/method/email
 
 
 ###
-GET http://localhost:5000/contacts/655bd5ed1b81fd65c9182de9
+GET http://localhost:5000/contacts/655bd8bae9e607d5a244f43a
 
 
 
 ###
-DELETE http://localhost:5000/contacts/655bd91698525bc0441c9786
+DELETE http://localhost:5000/contacts/656481b30741344b05671ad0
 
 
 ###
@@ -20,9 +20,9 @@ POST http://localhost:5000/contacts
 Content-Type: application/json
 
 {
-    "name": "Serina V",
-    "email": "yourcousin@family.com",
-    "phone": 2177865642,
+    "name": "Arnie",
+    "email": "strongarnie@peteandpete.com",
+    "phone": 5558889998,
     "preferredMethod": "email"
 }
 

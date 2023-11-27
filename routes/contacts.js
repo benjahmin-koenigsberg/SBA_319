@@ -34,6 +34,7 @@ router.get('/method/:method', async (req, res) => {
 
 //get once
 router.get('/:_id', async (req, res) => {
+    console.log(req.params._id)
    const contact = await Contact.findById(req.params._id)
     res.json(contact)
 
